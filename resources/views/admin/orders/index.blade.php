@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title','Kelola pesanan')
+@section('content')
+<div class="page-heading"><span class="eyebrow">PENGELOLAAN TRANSAKSI</span><h1>Pesanan pelanggan.</h1><p>Pantau pesanan masuk dan perbarui prosesnya.</p></div><form class="filter-bar" method="get"><label class="search-field"><span class="visually-hidden">Cari pesanan</span><input class="form-control" name="q" value="{{ request('q') }}" placeholder="Nomor pesanan atau nama pelanggan…" maxlength="100"></label><label><span class="visually-hidden">Status</span><select class="form-select" name="status"><option value="">Semua status</option>@foreach(\App\Models\Order::STATUSES as $status)<option @selected(request('status')===$status)>{{ $status }}</option>@endforeach</select></label><button class="btn btn-primary">Terapkan</button><a href="{{ route('admin.orders.index') }}">Reset</a></form><div class="panel">@include('components.order-table',['admin'=>true])</div>{{ $orders->links('pagination::bootstrap-5') }}
+@endsection
