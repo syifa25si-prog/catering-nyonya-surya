@@ -24,6 +24,8 @@ class Menu extends Model
 
     public function imageUrl(): string
     {
-        return $this->image ? route('menu.image', $this) : asset('images/meal.svg');
+        $defaultImage = config('menu-images.'.$this->name, 'images/meal.svg');
+
+        return $this->image ? route('menu.image', $this) : asset($defaultImage);
     }
 }

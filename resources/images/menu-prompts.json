@@ -1,0 +1,38 @@
+{
+  "tool": "built-in imagegen",
+  "purpose": "Generated menu serving illustrations, not original business photographs",
+  "images": [
+    {
+      "file": "nasi-kotak-ayam-bakar.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. One open kraft nasi kotak lunch box lined with banana leaf, containing white rice, glossy kecap grilled chicken (ayam bakar), stir fried vegetables, separate small sambal cup, crackers and a slice of fruit. 3/4 overhead view, entire box centered with comfortable margins suitable for landscape and square crop, pale cool gray tabletop, soft natural daylight, appetizing realistic textures, no people, no text, no logo, no watermark. Single image."
+    },
+    {
+      "file": "nasi-kotak-rendang.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. One open kraft nasi kotak lunch box lined with banana leaf containing steamed white rice, authentic dark brown beef rendang coated with rich dry coconut spice, cassava leaves (daun singkong), separate green sambal cup, crackers and fruit slice. Distinctly beef rendang, not chicken. 3/4 overhead view, entire box centered with margins for landscape/square crop, pale cool gray tabletop, soft natural daylight, realistic appetizing textures. No people, text, logos or watermark. Single image."
+    },
+    {
+      "file": "nasi-kotak-ayam-serundeng.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. One open kraft nasi kotak lunch box with banana leaf liner: white rice, Indonesian golden fried chicken generously topped with dry toasted coconut serundeng, oseng tempe, cooked vegetables, separate sambal cup and crackers. Distinct visible coconut shreds on chicken. Pale cool gray tabletop, soft natural daylight, realistic appetizing food texture, centered cohesive arrangement with comfortable edges suitable for landscape/square crop. No people, no text, no logos, no watermarks. Single image."
+    },
+    {
+      "file": "prasmanan-nusantara.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. Indonesian catering buffet Prasmanan Nusantara. A neat compact buffet display with open stainless steel serving trays containing white rice, ayam kecap chicken, sweet sour fish with peppers, capcay vegetables, and separate bowls of sambal, crackers and sliced fruit. Multiple full trays visibly distinguish this from a lunch box. Elevated three-quarter view. Pale cool gray tabletop, soft natural daylight, realistic appetizing food texture, centered cohesive arrangement with comfortable edges suitable for landscape/square crop. No people, no text, no logos, no watermarks. Single image."
+    },
+    {
+      "file": "prasmanan-istimewa.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. Indonesian premium catering buffet Prasmanan Istimewa. Elegant neat compact buffet with open stainless steel serving trays of white rice, dark beef rendang, golden roast chicken, clear vegetable soup, side accompaniments, fruit platter and individual small pudding cups. Several trays visible; this is a buffet spread, not a lunch box. Elevated three-quarter view. Pale cool gray tabletop, soft natural daylight, realistic appetizing food texture, centered cohesive arrangement with comfortable edges suitable for landscape/square crop. No people, no text, no logos, no watermarks. Single image."
+    },
+    {
+      "file": "snack-box-tradisional.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. One open kraft snack box containing exactly three Indonesian traditional snacks: a green pandan rolled crepe filled with coconut (dadar gulung), a banana-leaf-wrapped lemper with one opened end showing sticky rice, and a golden fried risoles. Small unbranded sealed drinking water cup alongside. Three recognizable distinct snacks. Pale cool gray tabletop, soft natural daylight, realistic appetizing food textures, cohesive centered composition with comfortable margins suitable for landscape and square crop. No people, no text, no logos, no watermarks. Single image."
+    },
+    {
+      "file": "snack-box-premium.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. One open premium kraft snack box containing exactly four Indonesian snacks: a golden flaky mini croissant, a rolled fried risoles, a pastel crescent savory pastry, and a small layered chocolate cake square. Small unbranded sealed drinking water cup alongside. Four recognizable distinct treats neatly separated. Pale cool gray tabletop, soft natural daylight, realistic appetizing food textures, cohesive centered composition with comfortable margins suitable for landscape and square crop. No people, no text, no logos, no watermarks. Single image."
+    },
+    {
+      "file": "paket-santap-keluarga.webp",
+      "prompt": "Photorealistic professional food photography for Indonesian catering website catalog. Indonesian family-style meal arranged on ceramic dishes for sharing: central platter of yellow turmeric ungkep chicken, separate white rice bowl, golden fried tofu and tempeh, clear sayur asem soup with corn and vegetables, fresh cucumber and cabbage lalapan and small red sambal bowl. Inviting compact family spread, no lunch box, no buffet trays. Pale cool gray tabletop, soft natural daylight, realistic appetizing food textures, cohesive centered composition with comfortable margins suitable for landscape and square crop. No people, no text, no logos, no watermarks. Single image."
+    }
+  ]
+}

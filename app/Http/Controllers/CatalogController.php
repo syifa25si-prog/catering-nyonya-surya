@@ -13,7 +13,7 @@ class CatalogController extends Controller
 {
     public function home(): View
     {
-        return view('shop.home', ['menus' => Menu::with('category')->where('is_available', true)->latest()->take(3)->get()]);
+        return view('shop.home', ['menus' => Menu::with('category')->where('is_available', true)->latest()->take(6)->get(), 'categories' => Category::orderBy('name')->get()]);
     }
 
     public function index(Request $request): View
