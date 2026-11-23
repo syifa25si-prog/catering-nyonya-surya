@@ -1,8 +1,56 @@
 @extends('layouts.app')
-@section('title','Paket catering')
+
+@section('title', 'Paket catering')
+
 @section('content')
-<div class="page-heading"><span class="eyebrow">DIBUAT DENGAN HATI, DINIKMATI BERSAMA</span><h1>Temukan sajian favorit Anda.</h1><p>Pilihan paket untuk melengkapi setiap momen.</p></div>
-<form class="filter-bar" method="get" action="{{ route('catalog') }}"><label class="search-field"><span class="visually-hidden">Cari paket</span><input class="form-control" name="q" value="{{ request('q') }}" placeholder="Cari nama paket atau hidangan…" maxlength="100"></label><label><span class="visually-hidden">Kategori</span><select class="form-select" name="category"><option value="">Semua kategori</option>@foreach($categories as $category)<option value="{{ $category->id }}" @selected(request('category')==$category->id)>{{ $category->name }}</option>@endforeach</select></label><button class="btn btn-primary">Cari paket</button>@if(request('q') || request('category'))<a href="{{ route('catalog') }}">Reset</a>@endif</form>
-@include('components.category-chips')
-<p class="muted">{{ $menus->total() }} paket tersedia · Gambar merupakan ilustrasi penyajian.</p><div class="menu-grid">@forelse($menus as $menu)@include('components.menu-card')@empty<div class="empty-state"><h3>Belum ada paket yang cocok.</h3><p>Coba kata kunci lain atau pilih semua kategori.</p><a class="btn btn-primary" href="{{ route('catalog') }}">Lihat semua paket</a></div>@endforelse</div><div class="pagination-wrap">{{ $menus->links('pagination::bootstrap-5') }}</div>
+    <div class="page-heading">
+        <span class="eyebrow">DIBUAT DENGAN HATI, DINIKMATI BERSAMA</span>
+        <h1>Temukan sajian favorit Anda.</h1>
+        <p>Pilihan paket untuk melengkapi setiap momen.</p>
+    </div>
+
+    <form class="filter-bar" method="get" action="{{ route('catalog') }}">
+        <label class="search-field">
+            <span class="visually-hidden">Cari paket</span>
+            <input class="form-control" name="q" value="{{ request('q') }}" placeholder="Cari nama paket atau hidangan…" maxlength="100">
+        </label>
+
+        <label>
+            <span class="visually-hidden">Kategori</span>
+            <select class="form-select" name="category">
+                <option value="">Semua kategori</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" @selected(request('category') == $category->id)>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+        </label>
+
+        <button class="btn btn-primary">Cari paket</button>
+
+        @if(request('q') || request('category'))
+            <a href="{{ route('catalog') }}">Reset</a>
+        @endif
+    </form>
+
+    @include('components.category-chips')
+
+    <p class="muted">{{ $menus->total() }} paket tersedia · Gambar merupakan ilustrasi penyajian.</p>
+
+    <div class="menu-grid">
+        @forelse($menus as $menu)
+            @include('components.menu-card')
+        @empty
+            <div class="empty-state">
+                <h3>Belum ada paket yang cocok.</h3>
+                <p>Coba kata kunci lain atau pilih semua kategori.</p>
+                <a class="btn btn-primary" href="{{ route('catalog') }}">Lihat semua paket</a>
+            </div>
+        @endforelse
+    </div>
+
+    <div class="pagination-wrap">
+        {{ $menus->links('pagination::bootstrap-5') }}
+    </div>
 @endsection

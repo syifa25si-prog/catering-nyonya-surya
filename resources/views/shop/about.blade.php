@@ -1,5 +1,46 @@
 @extends('layouts.app')
-@section('title','Tentang & pelayanan')
+
+@section('title', 'Tentang & pelayanan')
+
 @section('content')
-<section class="about-hero"><span class="eyebrow">TENTANG NYONYA SURYA</span><h1>Rasa rumahan.<br>Kehangatan dalam setiap sajian.</h1><p>Catering Nyonya Surya hadir untuk membantu menyiapkan hidangan bagi momen kebersamaan Anda. Melalui website ini, Anda dapat memilih paket, menentukan kebutuhan acara, dan memantau pesanan dengan mudah.</p></section><div class="section-heading"><h2>Layanan untuk momen Anda.</h2></div><div class="three-columns"><article class="panel"><span class="step-number">01</span><h3>Nasi kotak</h3><p>Hidangan praktis untuk rapat, kegiatan kantor, dan acara keluarga.</p></article><article class="panel"><span class="step-number">02</span><h3>Prasmanan</h3><p>Pilihan sajian bersama untuk perayaan dan acara istimewa.</p></article><article class="panel"><span class="step-number">03</span><h3>Snack box</h3><p>Kudapan untuk menemani pertemuan dan waktu kebersamaan.</p></article></div><section class="warm-banner"><div><h2>Pesan dalam beberapa langkah.</h2><p>Pilih paket, isi kebutuhan acara, lalu pantau status pesanan Anda.</p></div><a class="btn btn-primary" href="{{ route('catalog') }}">Lihat katalog →</a></section>
+    <section class="about-hero">
+        <span class="eyebrow">TENTANG NYONYA SURYA</span>
+        <h1>Rasa rumahan.<br>Kehangatan dalam setiap sajian.</h1>
+        <p>
+            Catering Nyonya Surya hadir untuk membantu menyiapkan hidangan bagi momen kebersamaan Anda. 
+            Melalui website ini, Anda dapat memilih paket, menentukan kebutuhan acara, dan memantau pesanan dengan mudah.
+        </p>
+    </section>
+
+    <div class="section-heading">
+        <h2>Layanan untuk momen Anda.</h2>
+    </div>
+
+    <div class="three-columns">
+        <article class="panel">
+            <span class="step-number">01</span>
+            <h3>Nasi kotak</h3>
+            <p>Hidangan praktis untuk rapat, kegiatan kantor, dan acara keluarga.</p>
+        </article>
+
+        <article class="panel">
+            <span class="step-number">02</span>
+            <h3>Prasmanan</h3>
+            <p>Pilihan sajian bersama untuk perayaan dan acara istimewa.</p>
+        </article>
+
+        <article class="panel">
+            <span class="step-number">03</span>
+            <h3>Snack box</h3>
+            <p>Kudapan untuk menemani pertemuan dan waktu kebersamaan.</p>
+        </article>
+    </div>
+
+    <section class="warm-banner">
+        <div>
+            <h2>Pesan dalam beberapa langkah.</h2>
+            <p>Pilih paket, isi kebutuhan acara, lalu pantau status pesanan Anda.</p>
+        </div>
+        <a class="btn btn-primary" href="{{ route('catalog') }}">Lihat katalog →</a>
+    </section>
 @endsection

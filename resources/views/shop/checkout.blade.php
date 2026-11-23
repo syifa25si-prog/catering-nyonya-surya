@@ -1,5 +1,70 @@
 @extends('layouts.app')
-@section('title','Form pemesanan')
+
+@section('title', 'Form pemesanan')
+
 @section('content')
-<a class="back-link" href="{{ route('cart.index') }}">← Kembali ke keranjang</a><div class="page-heading"><span class="eyebrow">TINGGAL SATU LANGKAH LAGI</span><h1>Lengkapi detail acara Anda.</h1><p>Pastikan informasi pemesanan sudah sesuai.</p></div><form action="{{ route('checkout.store') }}" method="post" class="checkout-grid" data-checkout>@csrf<input type="hidden" name="checkout_token" value="{{ session('checkout_token') }}"><div class="panel stack"><h2>Informasi pemesanan</h2><label>Nama pelanggan<input class="form-control" name="customer_name" value="{{ old('customer_name',auth()->user()->name) }}" required maxlength="100" autocomplete="name"></label><label>Nomor telepon<input class="form-control" type="tel" name="phone" value="{{ old('phone') }}" required maxlength="25" placeholder="08xxxxxxxxxx" autocomplete="tel"></label><label>Alamat lengkap<textarea class="form-control" name="address" rows="3" minlength="10" maxlength="2000" required autocomplete="street-address">{{ old('address') }}</textarea></label><label>Tanggal acara<input class="form-control" type="date" name="event_date" value="{{ old('event_date') }}" min="{{ now()->toDateString() }}" required></label><label>Catatan tambahan <small>(opsional)</small><textarea class="form-control" name="notes" rows="3" maxlength="2000" placeholder="Tuliskan kebutuhan khusus untuk acara Anda">{{ old('notes') }}</textarea></label></div><aside class="panel summary"><span class="eyebrow">SAJIAN UNTUK ACARA ANDA</span><h2>Ringkasan pesanan</h2>@foreach($items as $item)<div class="summary-line"><span>{{ $item['menu']->name }}<small>{{ $item['quantity'] }} × Rp {{ number_format($item['menu']->price,0,',','.') }}</small></span><strong>Rp {{ number_format($item['subtotal'],0,',','.') }}</strong></div>@endforeach<div class="summary-total"><span>Total</span><strong>Rp {{ number_format($total,0,',','.') }}</strong></div><button class="btn btn-primary">Konfirmasi pesanan →</button><p class="muted">Pesanan akan berstatus Menunggu sampai diproses oleh admin.</p></aside></form>
+    <a class="back-link" href="{{ route('cart.index') }}">← Kembali ke keranjang</a>
+
+    <div class="page-heading">
+        <span class="eyebrow">TINGGAL SATU LANGKAH LAGI</span>
+        <h1>Lengkapi detail acara Anda.</h1>
+        <p>Pastikan informasi pemesanan sudah sesuai.</p>
+    </div>
+
+    <form action="{{ route('checkout.store') }}" method="post" class="checkout-grid" data-checkout>
+        @csrf
+        <input type="hidden" name="checkout_token" value="{{ session('checkout_token') }}">
+
+        <div class="panel stack">
+            <h2>Informasi pemesanan</h2>
+
+            <label>
+                Nama pelanggan
+                <input class="form-control" name="customer_name" value="{{ old('customer_name', auth()->user()->name) }}" required maxlength="100" autocomplete="name">
+            </label>
+
+            <label>
+                Nomor telepon
+                <input class="form-control" type="tel" name="phone" value="{{ old('phone') }}" required maxlength="25" placeholder="08xxxxxxxxxx" autocomplete="tel">
+            </label>
+
+            <label>
+                Alamat lengkap
+                <textarea class="form-control" name="address" rows="3" minlength="10" maxlength="2000" required autocomplete="street-address">{{ old('address') }}</textarea>
+            </label>
+
+            <label>
+                Tanggal acara
+                <input class="form-control" type="date" name="event_date" value="{{ old('event_date') }}" min="{{ now()->toDateString() }}" required>
+            </label>
+
+            <label>
+                Catatan tambahan <small>(opsional)</small>
+                <textarea class="form-control" name="notes" rows="3" maxlength="2000" placeholder="Tuliskan kebutuhan khusus untuk acara Anda">{{ old('notes') }}</textarea>
+            </label>
+        </div>
+
+        <aside class="panel summary">
+            <span class="eyebrow">SAJIAN UNTUK ACARA ANDA</span>
+            <h2>Ringkasan pesanan</h2>
+
+            @foreach($items as $item)
+                <div class="summary-line">
+                    <span>
+                        {{ $item['menu']->name }}
+                        <small>{{ $item['quantity'] }} × Rp {{ number_format($item['menu']->price, 0, ',', '.') }}</small>
+                    </span>
+                    <strong>Rp {{ number_format($item['subtotal'], 0, ',', '.') }}</strong>
+                </div>
+            @endforeach
+
+            <div class="summary-total">
+                <span>Total</span>
+                <strong>Rp {{ number_format($total, 0, ',', '.') }}</strong>
+            </div>
+
+            <button class="btn btn-primary">Konfirmasi pesanan →</button>
+            <p class="muted">Pesanan akan berstatus Menunggu sampai diproses oleh admin.</p>
+        </aside>
+    </form>
 @endsection
